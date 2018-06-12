@@ -2,7 +2,7 @@ require "rspec/core"
 require "rspec/core/formatters/base_formatter"
 
 class RspecTapFormatter < RSpec::Core::Formatters::BaseFormatter
-  VERSION = "0.1.0"
+  VERSION = "0.2.0"
   # Specification found: https://testanything.org/tap-version-13-specification.html
   #
   # This registers the notifications this formatter supports, and tells
@@ -15,8 +15,8 @@ class RspecTapFormatter < RSpec::Core::Formatters::BaseFormatter
   end
 
   def start(notification)
-    @output << "TAP version 13\n"
-    @output << "1..#{notification.count}\n"
+    @output << "\rTAP version 13\n"
+    @output << "\r1..#{notification.count}\n"
   end
 
   def example_started(notification)
@@ -24,10 +24,10 @@ class RspecTapFormatter < RSpec::Core::Formatters::BaseFormatter
   end
 
   def example_passed(example_notification)
-    @output << "ok #{@count}\n"
+    @output << "\rok #{@count}\n"
   end
 
   def example_failed(failed_example_notification)
-    @output << "not ok #{@count}\n"
+    @output << "\rnot ok #{@count} - #{failed_example_notification.message_lines.join(' ')}\n"
   end
 end

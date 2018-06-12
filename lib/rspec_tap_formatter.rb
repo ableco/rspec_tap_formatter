@@ -16,7 +16,7 @@ class RspecTapFormatter < RSpec::Core::Formatters::BaseFormatter
 
   def start(notification)
     @output << "TAP version 13\n"
-    @output << "#{notification.class}"
+    @output << "1..#{notification.count}\n"
   end
 
   def example_started(notification)

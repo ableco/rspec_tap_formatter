@@ -2,7 +2,7 @@ require "rspec/core"
 require "rspec/core/formatters/base_formatter"
 
 class RspecTapFormatter < RSpec::Core::Formatters::BaseFormatter
-  VERSION = "0.2.0"
+  VERSION = "0.3.0"
   # Specification found: https://testanything.org/tap-version-13-specification.html
   #
   # This registers the notifications this formatter supports, and tells

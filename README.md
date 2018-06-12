@@ -1,4 +1,4 @@
-# Rspec::TapFormatter
+# RspecTapFormatter
 
 This gem adds TAP output format to RSpec.
 

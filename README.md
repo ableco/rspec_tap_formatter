@@ -1,6 +1,6 @@
 # RspecTapFormatter
 
-This gem adds TAP output format to RSpec.
+This gem adds TAP output format to RSpec, required for [Heroku CI](https://devcenter.heroku.com/articles/heroku-ci).
 
 ## License
 
